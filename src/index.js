@@ -2,7 +2,7 @@ const DOMSelectors = {
   displayContainer: document.querySelector(".container"),
   startButton: document.querySelector(".start-btn"),
 };
-submitButton = "";
+
 const questions = [
   {
     number: 0,
@@ -33,10 +33,10 @@ const questions = [
   },
 ];
 
-let questionNumber = 0;
-let correctAnswers = 0;
-
-const init = function () {
+(function init() {
+  submitButton = "";
+  questionNumber = 0;
+  correctAnswers = 0;
   DOMSelectors.startButton.addEventListener("click", function (e) {
     DOMSelectors.displayContainer.innerHTML = "";
     DOMSelectors.displayContainer.insertAdjacentHTML(
@@ -80,6 +80,7 @@ const init = function () {
     if (e.target.className == "submit-btn btn") {
       console.log("The submit button was pressed.");
       if (typeof answer == "undefined") {
+        alert("YOU MUST SELECT AN ANSWER! DO IT!!!");
         console.log("no answer has been selected");
       } else {
         console.log(`Answer ${answer} was selected.`);
@@ -114,6 +115,4 @@ const init = function () {
       }
     }
   });
-};
-
-init();
+})();

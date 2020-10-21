@@ -43,7 +43,7 @@ const questions = [
 let questionNumber = 0;
 console.log(questionNumber);
 const init = function () {
-    DOMSelectors.submitButton.addEventListener("click", event => {
+    DOMSelectors.submitButton.addEventListener("click", function(e) {
         DOMSelectors.displayContainer.innerHTML = "";
         questionNumber ++;
         DOMSelectors.displayContainer.insertAdjacentHTML("afterbegin",

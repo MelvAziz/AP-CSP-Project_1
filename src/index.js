@@ -74,21 +74,6 @@ const questions = [
   }
 ];
 
-<<<<<<< HEAD
-let questionNumber = 0;
-console.log(questionNumber);
-const init = function () {
-    DOMSelectors.submitButton.addEventListener("click", function(e) {
-        DOMSelectors.displayContainer.innerHTML = "";
-        questionNumber ++;
-        DOMSelectors.displayContainer.insertAdjacentHTML("afterbegin",
-        `<ul class="question_container">
-        <h1>Question: ${questions[questionNumber].question}</h1>
-        <input type="button" class="choice" id="choice-1" value="${questions[questionNumber].choiceOne}">
-        <input type="button" class="choice" id="choice-2" value="${questions[questionNumber].choiceTwo}">
-        <input type="button" class="choice" id="choice-3" value="${questions[questionNumber].choiceThree}">
-        <input type="button" class="choice" id="choice-4" value="${questions[questionNumber].choiceFour}">
-=======
 (function init() {
   submitButton = "";
   questionNumber = 0;
@@ -104,7 +89,6 @@ const init = function () {
         <input type="button" class="choice" id="choice-1" value="${questions[questionNumber].choiceTwo}">
         <input type="button" class="choice" id="choice-2" value="${questions[questionNumber].choiceThree}">
         <input type="button" class="choice" id="choice-3" value="${questions[questionNumber].choiceFour}">
->>>>>>> 283791d0f2120294bce5c152ed4ccbb466bba567
         </ul>
         <input type="button" class="submit-btn btn" value="Submit">`
     );
